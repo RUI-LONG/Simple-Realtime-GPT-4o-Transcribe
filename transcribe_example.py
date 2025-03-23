@@ -69,6 +69,7 @@ class VoiceTranscriber:
                 wav_stream.name = "_temp/audio.wav"
                 wav_stream.seek(0)
                 response = client.audio.transcriptions.create(
+                    # model="gpt-4o-transcribe",
                     model="gpt-4o-mini-transcribe",
                     file=wav_stream,
                     temperature=0.2,
